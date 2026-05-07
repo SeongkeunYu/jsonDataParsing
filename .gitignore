@@ -1,0 +1,18 @@
+# Claude Code 로컬 설정 (민감 정보 포함 가능)
+.mcp.json
+.claude/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+
+# 환경 변수
+.env
+.env.*

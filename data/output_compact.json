@@ -1,0 +1,1 @@
+{"meta":{"page":1,"total":2},"users":[{"address":{"city":"Seoul","zip":"04524"},"age":30,"email":"hong@example.com","id":1,"name":"Hong","tags":["admin","user"]},{"address":{"city":"Busan","zip":"48058"},"age":25,"email":"kim@example.com","id":2,"name":"Kim","tags":["user"]}]}

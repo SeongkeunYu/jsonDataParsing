@@ -1,0 +1,30 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Hong",
+      "email": "hong@example.com",
+      "age": 30,
+      "address": {
+        "city": "Seoul",
+        "zip": "04524"
+      },
+      "tags": ["admin", "user"]
+    },
+    {
+      "id": 2,
+      "name": "Kim",
+      "email": "kim@example.com",
+      "age": 25,
+      "address": {
+        "city": "Busan",
+        "zip": "48058"
+      },
+      "tags": ["user"]
+    }
+  ],
+  "meta": {
+    "total": 2,
+    "page": 1
+  }
+}
