@@ -9,7 +9,9 @@ DB_FILE = Path(__file__).parent.parent / "data" / "db.json"
 
 # ── I/O helpers (PoC 코드 구조 유지) ─────────────────────────────────────
 
-def _load(path: Path = DB_FILE) -> dict:
+def _load(path: Path = None) -> dict:
+    if path is None:
+        path = DB_FILE
     if not path.exists() or path.stat().st_size == 0:
         return {"users": [], "meta": {"total": 0}}
     data = json.loads(path.read_text(encoding="utf-8"))
@@ -18,8 +20,10 @@ def _load(path: Path = DB_FILE) -> dict:
     return data
 
 
-def _save(data: dict, path: Path = DB_FILE):
+def _save(data: dict, path: Path = None):
     """orjson으로 저장 — PoC save_with_orjson 동일 방식"""
+    if path is None:
+        path = DB_FILE
     option = orjson.OPT_INDENT_2 | orjson.OPT_SORT_KEYS
     path.write_bytes(orjson.dumps(data, option=option))
 
